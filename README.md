@@ -25,8 +25,8 @@ MCP-сервер для КОМПАС-3D. Подключает Claude, Codex, Cur
 <table>
   <tr>
     <td width="34%" align="center">
-      <a href="media/reducer.mp4"><img src="media/reducer-preview.gif" alt="Ролик: агент строит редуктор в КОМПАС-3D"></a><br>
-      <a href="media/reducer.mp4">▶ Ролик целиком, 1 мин</a>
+      <a href="https://github.com/cad-lab-ai/kompas-mcp/raw/main/media/reducer.mp4"><img src="media/reducer-preview.gif" alt="Ролик: агент строит редуктор в КОМПАС-3D"></a><br>
+      <a href="https://github.com/cad-lab-ai/kompas-mcp/raw/main/media/reducer.mp4">▶ Ролик целиком: 1 мин, mp4 9 МБ</a>
     </td>
     <td width="66%" align="center">
       <img src="media/reducer-open.png" alt="Сборка редуктора без крышки корпуса"><br>
