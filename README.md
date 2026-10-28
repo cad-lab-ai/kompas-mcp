@@ -15,6 +15,49 @@ MCP-сервер для КОМПАС-3D. Подключает Claude, Codex, Cur
 > [в issue «Хочу участвовать»](https://github.com/cad-lab-ai/kompas-mcp/issues/new?template=contribute.yml):
 > позовём, как только откроем код.
 
+## Как это выглядит
+
+Одноступенчатый цилиндрический редуктор, который агент спроектировал в КОМПАС за одну беседу: расчёт передачи,
+сборка, валы и колесо, литой корпус и крышка, крышки подшипников, полный комплект конструкторской документации.
+Подшипники, шпонки и манжеты — из библиотек КОМПАС. В ролике то же построение повторено мелкими шагами, чтобы
+каждый шаг было видно.
+
+<table>
+  <tr>
+    <td width="34%" align="center">
+      <a href="media/reducer.mp4"><img src="media/reducer-preview.gif" alt="Ролик: агент строит редуктор в КОМПАС-3D"></a><br>
+      <a href="media/reducer.mp4">▶ Ролик целиком, 1 мин</a>
+    </td>
+    <td width="66%" align="center">
+      <img src="media/reducer-open.png" alt="Сборка редуктора без крышки корпуса"><br>
+      Сборка без крышки корпуса
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <a href="media/drawing-assembly.png"><img src="media/drawing-assembly.png" alt="Сборочный чертёж редуктора"></a><br>
+      Сборочный чертёж, А1
+    </td>
+    <td width="50%" align="center">
+      <a href="media/drawing-housing.png"><img src="media/drawing-housing.png" alt="Чертёж корпуса"></a><br>
+      Корпус, литьё, А1
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <a href="media/drawing-pinion-shaft.png"><img src="media/drawing-pinion-shaft.png" alt="Чертёж вала-шестерни"></a><br>
+      Вал-шестерня с таблицей параметров, А3
+    </td>
+    <td width="50%" align="center">
+      <a href="media/drawing-gear.png"><img src="media/drawing-gear.png" alt="Чертёж зубчатого колеса"></a><br>
+      Колесо зубчатое, А3
+    </td>
+  </tr>
+</table>
+
 ## Что можно попросить
 
 - «Сделай фланец Ø120 с шестью отверстиями под M8 на Ø95»
