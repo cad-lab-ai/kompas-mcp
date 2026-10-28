@@ -1,0 +1,16 @@
+name: Пожелание
+description: Задача, которую агент пока не решает, или чего не хватает
+labels: [enhancement]
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: Какую задачу хотите решить
+      description: Опишите задачу конструктора, а не способ решения — так проще найти лучший.
+    validations:
+      required: true
+  - type: textarea
+    id: now
+    attributes:
+      label: Как решаете сейчас
+      description: Сколько времени уходит, что раздражает.

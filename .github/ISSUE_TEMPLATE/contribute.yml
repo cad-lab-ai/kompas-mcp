@@ -1,0 +1,24 @@
+name: Хочу участвовать
+description: Исходники откроем скоро — оставьте заявку, позовём первыми
+labels: [contributor]
+body:
+  - type: markdown
+    attributes:
+      value: Исходники коннектора выложим в ближайшие недели. Расскажите о себе — позовём, как только откроем код.
+  - type: textarea
+    id: about
+    attributes:
+      label: Чем хотите заняться
+      description: Например, инструменты для чертежей, поддержка новой версии КОМПАС, навыки под типовые задачи, тесты на своих моделях.
+    validations:
+      required: true
+  - type: textarea
+    id: background
+    attributes:
+      label: Опыт
+      description: КОМПАС, его API, Python, .NET, MCP — что из этого знакомо.
+  - type: input
+    id: contact
+    attributes:
+      label: Как связаться
+      description: Telegram или почта, если удобнее не через GitHub.

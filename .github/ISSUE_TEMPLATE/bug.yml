@@ -1,0 +1,25 @@
+name: Ошибка
+description: Агент или установщик ведёт себя не так, как описано
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: Что случилось
+      description: Что просили агента, что он сделал и что ожидали вместо этого.
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Версии
+      description: Коннектор, КОМПАС, Windows, агент (Claude Code, Codex, Cursor…).
+      placeholder: 0.8.0, КОМПАС-3D v19, Windows 11, Claude Code
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: Журнал
+      description: Последние строки журнала — агент достанет их инструментом log_tail. Модели и чертежи прикладывайте, только если не жалко их показать.
+      render: text
