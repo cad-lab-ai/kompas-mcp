@@ -84,7 +84,7 @@ MCP-сервер для КОМПАС-3D. Подключает Claude, Codex, Cur
 ## Что нужно
 
 - Windows 10/11 x64
-- КОМПАС-3D v19 (x64). Поддержка более новых версий — в работе.
+- КОМПАС-3D v19 и новее (x64). На более новых версиях возможны небольшие отклонения в работе.
 - .NET Framework 4.8 (в Windows 10/11 обычно уже есть)
 - Агент с поддержкой MCP: Claude Code, Claude Desktop, Codex, Cursor, VS Code (Copilot), Gemini CLI, Windsurf,
   LM Studio или другой
