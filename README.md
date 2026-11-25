@@ -7,13 +7,11 @@ MCP-сервер для КОМПАС-3D. Подключает Claude, Codex, Cur
 Агент не генерирует файлы с нуля — он работает в вашей модели и вашей сборке, в привычном окне КОМПАС, и
 модель остаётся редактируемой: дерево построения, эскизы, переменные, сопряжения.
 
-**[Скачать последнюю версию](https://github.com/cad-lab-ai/kompas-mcp/releases/latest)** · бесплатно для некоммерческого использования ·
-сайт [cad-lab.xyz](https://cad-lab.xyz)
+**[Скачать приложение cad-lab для Windows](https://cad-lab.xyz/app/?utm_source=github&utm_medium=referral&utm_campaign=desktop_download&utm_content=kompas-mcp#download)**
 
-> **Об исходниках.** Первые недели публикуем только сборку — смотрим, насколько коннектор нужен людям.
-> Исходники выложим следом. Если хотите участвовать в разработке — напишите
-> [в issue «Хочу участвовать»](https://github.com/cad-lab-ai/kompas-mcp/issues/new?template=contribute.yml):
-> позовём, как только откроем код.
+В приложении есть агент и каталог инженерных навыков. Для подключения КОМПАС-3D к cad-lab или к своему MCP-клиенту нужен [коннектор KompasAgent](https://github.com/cad-lab-ai/kompas-mcp/releases/latest). Он поддерживает КОМПАС-3D v19 и новее на Windows x64 и доступен бесплатно для некоммерческого использования. [Установка](#установка)
+
+В этом репозитории опубликованы сборка, документация и навык для агента. Если хотите участвовать в развитии коннектора, [откройте заявку](https://github.com/cad-lab-ai/kompas-mcp/issues/new?template=contribute.yml).
 
 ## Как это выглядит
 
@@ -25,11 +23,11 @@ MCP-сервер для КОМПАС-3D. Подключает Claude, Codex, Cur
 <table>
   <tr>
     <td width="34%" align="center">
-      <a href="https://github.com/cad-lab-ai/kompas-mcp/raw/main/media/reducer.mp4"><img src="media/reducer.gif" alt="Ролик: агент строит редуктор в КОМПАС-3D"></a><br>
+      <a href="https://github.com/cad-lab-ai/kompas-mcp/raw/main/media/reducer.mp4"><img src="https://raw.githubusercontent.com/cad-lab-ai/kompas-mcp/main/media/reducer.gif" alt="Ролик: агент строит редуктор в КОМПАС-3D"></a><br>
       <a href="https://github.com/cad-lab-ai/kompas-mcp/raw/main/media/reducer.mp4">▶ Ролик целиком: 1 мин, mp4 9 МБ</a>
     </td>
     <td width="66%" align="center">
-      <img src="media/reducer-open.png" alt="Сборка редуктора без крышки корпуса"><br>
+      <img src="https://raw.githubusercontent.com/cad-lab-ai/kompas-mcp/main/media/reducer-open.png" alt="Сборка редуктора без крышки корпуса"><br>
       Сборка без крышки корпуса
     </td>
   </tr>
@@ -38,21 +36,21 @@ MCP-сервер для КОМПАС-3D. Подключает Claude, Codex, Cur
 <table>
   <tr>
     <td width="50%" align="center">
-      <a href="media/drawing-assembly.png"><img src="media/drawing-assembly.png" alt="Сборочный чертёж редуктора"></a><br>
+      <a href="https://raw.githubusercontent.com/cad-lab-ai/kompas-mcp/main/media/drawing-assembly.png"><img src="https://raw.githubusercontent.com/cad-lab-ai/kompas-mcp/main/media/drawing-assembly.png" alt="Сборочный чертёж редуктора"></a><br>
       Сборочный чертёж, А1
     </td>
     <td width="50%" align="center">
-      <a href="media/drawing-housing.png"><img src="media/drawing-housing.png" alt="Чертёж корпуса"></a><br>
+      <a href="https://raw.githubusercontent.com/cad-lab-ai/kompas-mcp/main/media/drawing-housing.png"><img src="https://raw.githubusercontent.com/cad-lab-ai/kompas-mcp/main/media/drawing-housing.png" alt="Чертёж корпуса"></a><br>
       Корпус, литьё, А1
     </td>
   </tr>
   <tr>
     <td width="50%" align="center">
-      <a href="media/drawing-pinion-shaft.png"><img src="media/drawing-pinion-shaft.png" alt="Чертёж вала-шестерни"></a><br>
+      <a href="https://raw.githubusercontent.com/cad-lab-ai/kompas-mcp/main/media/drawing-pinion-shaft.png"><img src="https://raw.githubusercontent.com/cad-lab-ai/kompas-mcp/main/media/drawing-pinion-shaft.png" alt="Чертёж вала-шестерни"></a><br>
       Вал-шестерня с таблицей параметров, А3
     </td>
     <td width="50%" align="center">
-      <a href="media/drawing-gear.png"><img src="media/drawing-gear.png" alt="Чертёж зубчатого колеса"></a><br>
+      <a href="https://raw.githubusercontent.com/cad-lab-ai/kompas-mcp/main/media/drawing-gear.png"><img src="https://raw.githubusercontent.com/cad-lab-ai/kompas-mcp/main/media/drawing-gear.png" alt="Чертёж зубчатого колеса"></a><br>
       Колесо зубчатое, А3
     </td>
   </tr>
@@ -178,7 +176,7 @@ MCP-сервер для КОМПАС-3D. Подключает Claude, Codex, Cur
 | свой КОМПАС агента | `instance_start`, `instance_list`, `instance_attach`, `instance_stop` |
 | служебные | `kompas_health`, `system_info`, `tool_contract`, `log_tail`, `feedback` |
 
-Порядок работы агента — в навыке [`skill/kompas-engineering`](skill/kompas-engineering/SKILL.md): требование в
+Порядок работы агента — в навыке [`skill/kompas-engineering`](https://github.com/cad-lab-ai/kompas-mcp/blob/main/skill/kompas-engineering/SKILL.md): требование в
 числах, разведка по модели, проба, правка этапом, проверка. Навык ставится вместе с сервером.
 
 ## Безопасность и данные
@@ -192,6 +190,13 @@ MCP-сервер для КОМПАС-3D. Подключает Claude, Codex, Cur
   вызванных инструментов с кодами ошибок — без параметров. Адрес — `https://feedback.cad-lab.xyz`. Выключить
   совсем: `install.ps1 -Feedback off` или переменная окружения `KOMPAS_FEEDBACK=0` у MCP-сервера.
 
+## Запуск отдельного экземпляра
+
+Инструмент `instance_start` использует `KOMPAS.exe` запущенного КОМПАС с включённой библиотекой агента.
+Чтобы выбрать другую установленную версию или запускать её при закрытом КОМПАС, задайте полный путь
+к её `KOMPAS.exe` в переменной `KOMPAS_EXE` на машине исполнения. Если переменная не задана и КОМПАС
+с библиотекой агента закрыт, используется стандартный путь установки v19.
+
 ## Если что-то не работает
 
 - Агент не видит инструментов `kompas` — перезапустите агента после установки; проверьте, что сервер прописан
@@ -202,6 +207,8 @@ MCP-сервер для КОМПАС-3D. Подключает Claude, Codex, Cur
   `"%LOCALAPPDATA%\Programs\KompasAgent\python\python.exe" -m kompas_mcp --list`.
 - Остальное — [issue](https://github.com/cad-lab-ai/kompas-mcp/issues/new/choose) с версией коннектора и КОМПАС
   и последними строками журнала (агент достанет их инструментом `log_tail`).
+
+Архив содержит копию навыка в `skill/kompas-engineering/SKILL.md`. Шаблоны нативных моделей пружин могут отсутствовать в публичной поставке. Создание пружины из шаблона в таком архиве недоступно.
 
 ## Лицензия
 
