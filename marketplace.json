@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 2,
+  "name": "cad-lab",
+  "displayName": "cad-lab",
+  "categories": [
+    {
+      "id": "cad",
+      "displayName": "CAD",
+      "description": "Расширения для работы агента в CAD-системах."
+    }
+  ],
+  "plugins": [
+    {
+      "id": "cad-lab-kompas",
+      "repositoryUrl": "https://github.com/cad-lab-ai/kompas-mcp",
+      "category": "cad",
+      "displayName": "КОМПАС-3D v19",
+      "description": "Работа агента в открытом КОМПАС-3D: построение и правка моделей, чертежи, проверки и экспорт.",
+      "icon": "DrawingCompass",
+      "tags": [
+        "engineering"
+      ],
+      "author": {
+        "name": "cad-lab",
+        "url": "https://cad-lab.xyz/"
+      },
+      "source": {
+        "git": {
+          "url": "https://github.com/cad-lab-ai/kompas-mcp.git",
+          "ref": "v0.9.0",
+          "subdir": "plugin"
+        }
+      },
+      "overview": "## Работа в КОМПАС-3D\nРасширение связывает агента с открытой CAD-сессией на Windows. Совместимость: КОМПАС-3D v19 и новее, x64; на новых версиях возможны небольшие отклонения.\n\n## Возможности\n- Обзор модели и поиск элементов.\n- Построение и изменение деталей и сборок.\n- Работа с чертежами, проверка результата и экспорт.\n- Изменения по этапам с записью отмены в CAD.\n\n## Перед началом\n[Скачать коннектор КОМПАСа с GitHub](https://github.com/cad-lab-ai/kompas-mcp/releases/latest). Исходный код не входит в публичную поставку. Распакуйте архив и запустите `powershell -ExecutionPolicy Bypass -File install.ps1 -McpConfig none -NoSkill`, затем установите интеграцию из этой карточки. Инструменты MCP уже входят в бинарный архив; интеграция подключает их к cad-lab.\n\nНужен установленный и подключённый коннектор КОМПАСа. Методики проектирования, оформления и нормоконтроля доступны отдельными навыками.\n\n## Пример задачи\n«Добавь фаски на указанные кромки и проверь модель»."
+    }
+  ]
+}

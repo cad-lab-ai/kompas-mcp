@@ -1,0 +1,11 @@
+{
+  "sdkMajor": 0,
+  "sdkVersion": "0.6.164",
+  "artifactFormatVersion": 1,
+  "pluginId": "cad-lab-kompas",
+  "pluginVersion": "0.9.0",
+  "builtWith": {
+    "bbVersion": "0.50.1",
+    "pluginSdkVersion": "0.6.164"
+  }
+}
